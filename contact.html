@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Family Cure Mission - Book appointments, ask questions, or get in touch with our team.">
+    <title>Contact Us | Family Cure Mission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Family Cure Mission Logo">
+                <span class="logo-text">Family Cure Mission</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="psychotherapy.html">Psychotherapy</a></li>
+                        <li><a href="health-services.html">Health Services</a></li>
+                        <li><a href="economic-empowerment.html">Economic Empowerment</a></li>
+                    </ul>
+                </li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="interventions-2026.html">2026 Interventions</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="#booking" class="btn-nav">Book Appointment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header contact-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help. Reach out to us today.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card" data-aos="fade-up">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Family Cure Mission Headquarters<br>
+                    Kampala, Uganda<br>
+                    P.O. Box XXXX</p>
+                    <a href="#map" class="info-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Main Line: +256 XXX XXX XXX<br>
+                    WhatsApp: +256 XXX XXX XXX<br>
+                    Emergency: +256 XXX XXX XXX</p>
+                    <a href="tel:+256000000000" class="info-link">Call Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General: info@familycuremission.org<br>
+                    Therapy: therapy@familycuremission.org<br>
+                    Agriculture: agric@familycuremission.org</p>
+                    <a href="mailto:info@familycuremission.org" class="info-link">Send Email <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                    Saturday: 9:00 AM - 2:00 PM<br>
+                    Sunday: Closed</p>
+                    <a href="#booking" class="info-link">Book Appointment <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book an Appointment</h2>
+                <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            </div>
+            <div class="booking-container">
+                <div class="booking-form-wrapper">
+                    <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mqevbgzq" method="POST">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="first_name">First Name *</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name *</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="service_needed">Service Needed *</label>
+        <select id="service_needed" name="service_needed" required>
+            <option value="">Select a service</option>
+            <option value="psychotherapy">Psychotherapy</option>
+            <option value="individual-therapy">Individual Therapy</option>
+            <option value="family-therapy">Family Therapy</option>
+            <option value="couples-therapy">Couples Therapy</option>
+            <option value="online-therapy">Online Therapy</option>
+            <option value="health-services">General Health Services</option>
+            <option value="medical-consultation">Medical Consultation</option>
+            <option value="maternal-health">Maternal & Child Health</option>
+            <option value="economic-empowerment">Agricultural Training</option>
+            <option value="other">Other (Please specify in message)</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="preferred_date">Preferred Date *</label>
+            <input type="date" id="preferred_date" name="preferred_date" required>
+        </div>
+        <div class="form-group">
+            <label for="preferred_time">Preferred Time *</label>
+            <select id="preferred_time" name="preferred_time" required>
+                <option value="">Select time</option>
+                <option value="8:00-9:00">8:00 AM - 9:00 AM</option>
+                <option value="9:00-10:00">9:00 AM - 10:00 AM</option>
+                <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+                <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
+                <option value="12:00-13:00">12:00 PM - 1:00 PM</option>
+                <option value="13:00-14:00">1:00 PM - 2:00 PM</option>
+                <option value="14:00-15:00">2:00 PM - 3:00 PM</option>
+                <option value="15:00-16:00">3:00 PM - 4:00 PM</option>
+                <option value="16:00-17:00">4:00 PM - 5:00 PM</option>
+                <option value="17:00-18:00">5:00 PM - 6:00 PM</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="appointment_type">Appointment Type *</label>
+        <div class="radio-group">
+            <label class="radio-label">
+                <input type="radio" name="appointment_type" value="in-person" checked>
+                <span>In-Person</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="appointment_type" value="online">
+                <span>Online (Video Call)</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="additional_info">Additional Information</label>
+        <textarea id="additional_info" name="additional_info" rows="5" placeholder="Please provide any additional details about your appointment needs..."></textarea>
+    </div>
+
+    <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+            <input type="checkbox" name="terms" required>
+            <span>I agree to the <a href="#">privacy policy</a> and understand that all information is kept confidential *</span>
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-large">
+        <i class="fas fa-calendar-check"></i> Book Appointment
+    </button>
+
+    <div class="form-note">
+        <i class="fas fa-info-circle"></i> You will receive a confirmation email within 24 hours. For urgent matters, please call us directly.
+    </div>
+</form>
+                </div>
+                <div class="booking-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
+                        <p>If you have questions about which service is right for you, please call us and our team will be happy to guide you.</p>
+                        <a href="tel:+256000000000" class="btn btn-outline-primary">Call Us Now</a>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-shield-alt"></i> Confidentiality</h3>
+                        <p>All appointments and services are completely confidential. Your privacy is our top priority.</p>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clock"></i> Quick Response</h3>
+                        <p>We typically respond to appointment requests within 24 hours. Same-day appointments may be available for urgent needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Contact Form -->
+    <section class="general-contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="section-subtitle">Have a question or feedback? We'd love to hear from you</p>
+            </div>
+            <div class="general-contact-container">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqevbgzq" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <input type="text" id="contactSubject" name="contactSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Us</h2>
+                <p class="section-subtitle">Visit our main office in Kampala</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35846203107!2d32.37941654999999!3d0.3475964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb6c6b8c9d0b%3A0x8c8e8c8c8c8c8c8c!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How quickly can I get an appointment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically offer same-day or next-day appointments for most services. Emergency cases are prioritized. After submitting your booking request, we'll confirm your appointment within 24 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer online consultations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer online psychotherapy sessions and telemedicine consultations via secure video platforms. Simply select "Online" when booking your appointment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are your payment options?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept cash, mobile money (MTN, Airtel), bank transfers, and credit/debit cards. We also offer flexible payment plans for agricultural training programs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my information kept confidential?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. All client information is kept strictly confidential in accordance with professional ethics and privacy laws. Your trust and privacy are our highest priorities.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I cancel or reschedule my appointment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel or reschedule up to 24 hours before your appointment time. Please contact us as soon as possible to avoid any cancellation fees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+            <button class="btn btn-primary close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.png" alt="FCM Logo" class="footer-logo">
+                    <p class="footer-description">Person-centered care organization dedicated to improving the health and wealth of Ugandan families.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="interventions-2026.html">2026 Interventions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="psychotherapy.html">Psychotherapy</a></li>
+                        <li><a href="health-services.html">Health Services</a></li>
+                        <li><a href="economic-empowerment.html">Economic Empowerment</a></li>
+                        <li><a href="contact.html#booking">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-phone"></i> +256 XXX XXX XXX</li>
+                        <li><i class="fas fa-envelope"></i> info@familycuremission.org</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 8AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Family Cure Mission. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>

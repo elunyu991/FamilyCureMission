@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Editor / IDE directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local app data
+.freebuff/
+
+# Temporary / junk files
+New Text Document.txt
+*.tmp
+*.bak
+
+# Node (if ever added)
+node_modules/
+package-lock.json
