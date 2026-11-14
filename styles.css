@@ -7982,3 +7982,336 @@ section {
 .impact-card-redesign[data-aos="flip-left"]:nth-child(4) .progress-bar {
     --progress: 70;
 }
+
+/* ============================================================
+   MOBILE & RESPONSIVE FIXES (appended)
+   Ensures consistent mobile view across all pages, including nav.
+   ============================================================ */
+
+/* Prevent horizontal overflow globally */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container breathing room on small screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+    section {
+        padding: 2.5rem 0;
+    }
+}
+
+/* ---------- NAV BAR (mobile) ---------- */
+@media (max-width: 992px) {
+    /* Show the hamburger toggle */
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+        border-radius: 8px;
+        background: rgba(11, 83, 69, 0.06);
+    }
+    .mobile-menu-toggle span {
+        width: 26px;
+        height: 3px;
+    }
+
+    /* Hide nav menu off-canvas by default */
+    .nav-menu {
+        position: fixed !important;
+        top: 70px;
+        left: -100% !important;
+        width: 85% !important;
+        max-width: 360px !important;
+        height: calc(100vh - 70px) !important;
+        background: var(--white) !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 1.5rem !important;
+        gap: 0 !important;
+        transition: left 0.3s ease !important;
+        overflow-y: auto !important;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15) !important;
+        z-index: 1001 !important;
+    }
+    .nav-menu.active {
+        left: 0 !important;
+    }
+
+    /* Full-width menu items with tap targets */
+    .nav-menu > li {
+        width: 100%;
+        border-bottom: 1px solid var(--gray-200);
+        padding: 0.25rem 0;
+    }
+    .nav-menu > li > a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0.25rem;
+        font-size: 1.05rem;
+    }
+
+    /* Dropdowns collapsed on mobile, expand on .active */
+    .dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border-top: none !important;
+        border-left: 3px solid var(--primary-green) !important;
+        padding: 0.25rem 0 0.25rem 1rem !important;
+        margin: 0.5rem 0 0.25rem 0 !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: block !important;
+    }
+    .dropdown.active .dropdown-menu {
+        max-height: 400px;
+        opacity: 1;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    .dropdown-menu li a {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    /* Book appointment button full width */
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.75rem;
+        display: block;
+    }
+
+    /* Overlay above content, below menu */
+    .nav-overlay {
+        z-index: 1000 !important;
+    }
+
+    /* Prevent page scroll lock issues: ensure body can scroll when menu closed */
+}
+
+/* Logo text always visible on very small? keep hidden until 768 (existing) */
+@media (max-width: 767px) {
+    .logo img {
+        height: 40px;
+    }
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* ---------- GENERAL RESPONSIVE ---------- */
+/* Grids: stack on small screens */
+@media (max-width: 768px) {
+    .services-grid,
+    .features-grid,
+    .stats-grid,
+    .mission-vision-grid,
+    .expect-grid,
+    .team-grid,
+    .contact-grid,
+    .footer-grid,
+    .footer-content {
+        grid-template-columns: 1fr !important;
+    }
+    .expect-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid,
+    .features-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Hero adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+        background-attachment: scroll !important;
+    }
+    .hero::before {
+        background-attachment: scroll !important;
+    }
+    .hero-content {
+        padding: 1.25rem;
+        margin-top: 70px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+    .hero-scroll {
+        display: none;
+    }
+}
+
+/* Page headers */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 6.5rem 0 3rem;
+        margin-top: 70px;
+    }
+    .page-header h1 {
+        font-size: 1.85rem;
+    }
+    .page-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Stats */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.25rem;
+    }
+    .stat-item {
+        padding: 0.75rem;
+    }
+}
+
+/* Service / feature cards */
+@media (max-width: 768px) {
+    .service-card,
+    .feature-item,
+    .mission-box,
+    .vision-box {
+        padding: 1.5rem;
+    }
+    .service-icon,
+    .feature-icon,
+    .icon-box {
+        width: 72px;
+        height: 72px;
+        font-size: 1.75rem;
+    }
+}
+
+/* Testimonials */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 1.25rem;
+    }
+    .testimonial-content p {
+        font-size: 1rem;
+    }
+    .testimonials-slider {
+        min-height: auto;
+    }
+}
+
+/* CTA buttons stack */
+@media (max-width: 768px) {
+    .cta-buttons,
+    .cta-content .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* Footer stacking */
+@media (max-width: 768px) {
+    footer .container,
+    .footer {
+        text-align: center;
+    }
+    footer ul {
+        padding-left: 0;
+    }
+}
+
+/* Forms: prevent iOS zoom, full width inputs */
+@media (max-width: 768px) {
+    input, select, textarea, button {
+        font-size: 16px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+    }
+}
+
+/* Modal */
+@media (max-width: 576px) {
+    .modal-content,
+    .success-modal-content {
+        width: 92%;
+        margin: 1rem;
+        padding: 1.25rem;
+    }
+}
+
+/* Tables horizontal scroll */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Impact numbers row */
+@media (max-width: 768px) {
+    .impact-stats,
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Ensure dropdown chevron rotates */
+.dropdown.active > a i,
+.dropdown.active > a .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Backdrop blur fallback handled */
+
+/* Reduce motion for mobile performance */
+@media (max-width: 768px) {
+    .hero::before {
+        animation: none;
+    }
+}
+
+/* Fix very small screens hero title */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    .logo-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Utility: hide scroll-to-top overlap? keep */
