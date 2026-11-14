@@ -541,9 +541,8 @@
         const navLinks = navMenu?.querySelectorAll('a');
         navLinks?.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Don't close menu when tapping a dropdown trigger on mobile
+                // On mobile, if this is a dropdown trigger, toggle the dropdown and don't navigate
                 if (window.innerWidth <= 992 && this.closest('.dropdown') && this.closest('.dropdown').querySelector('.dropdown-menu')) {
-                    // Toggle the dropdown open/close
                     const dropdown = this.closest('.dropdown');
                     dropdown.classList.toggle('active');
                     const chevron = dropdown.querySelector('.fa-chevron-down, i');
@@ -552,9 +551,14 @@
                     }
                     return;
                 }
-                e.preventDefault();
-                closeMobileMenu();
-                window.location.href = this.getAttribute('href');
+                // For regular links on mobile: navigate and close menu
+                if (window.innerWidth <= 992) {
+                    closeMobileMenu();
+                    window.location.href = this.getAttribute('href');
+                } else {
+                    // On desktop, just navigate (menu is already visible)
+                    window.location.href = this.getAttribute('href');
+                }
             });
         });
 
