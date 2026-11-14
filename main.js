@@ -543,9 +543,18 @@
             link.addEventListener('click', function(e) {
                 // Don't close menu when tapping a dropdown trigger on mobile
                 if (window.innerWidth <= 992 && this.closest('.dropdown') && this.closest('.dropdown').querySelector('.dropdown-menu')) {
+                    // Toggle the dropdown open/close
+                    const dropdown = this.closest('.dropdown');
+                    dropdown.classList.toggle('active');
+                    const chevron = dropdown.querySelector('.fa-chevron-down, i');
+                    if (chevron) {
+                        chevron.style.transform = dropdown.classList.contains('active') ? 'rotate(180deg)' : '';
+                    }
                     return;
                 }
+                e.preventDefault();
                 closeMobileMenu();
+                window.location.href = this.getAttribute('href');
             });
         });
 
