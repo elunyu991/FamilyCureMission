@@ -641,8 +641,6 @@ section {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
 }
 
 .nav-overlay.visible {
